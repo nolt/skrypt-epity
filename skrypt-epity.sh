@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #================
 #tytuł		:skrypt-epity.sh
 #opis		:Skrypt do instalacji programu e-pity dla systemu Linux - Ubuntu/Debian.
