@@ -1,15 +1,16 @@
 #!/bin/bash
 
-#################################################
-#						#
-#	Skrypt możesz pobrać ze strony:		#	
-#		www.wizzi.pl			#
-#						#
-#		Autor skryptu: Nolt		#
-#    Licencja: Common Public License v1.0	#
-#   http://opensource.org/licenses/cpl1.0.txt 	#
-#						#
-#################################################
+
+#================
+#tytuł		:skrypt-epity.sh
+#opis		:Skrypt do instalacji programu e-pity dla systemu Linux - Ubuntu/Debian.
+#autor		:Nolt
+#data		:20150310
+#aktualizacja	:20160520
+#wersja		:0.4
+#licencja:	:Eclipse Public License 1.0 (https://opensource.org/licenses/eclipse-1.0.txt)
+#================
+
 
 
 #tworzenie_folderu
