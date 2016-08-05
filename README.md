@@ -17,5 +17,11 @@ następnie uruchom skrypt:
 
 **sh skrypt-epity.sh**
 
+## Licencja
+
+Licencja skryptu to: [Eclipse Public License 1.0]
+
+
 
 [www.wizzi.pl]: http://www.wizzi.pl/index.php?action=tpmod;dl=item177
+[Eclipse Public License 1.0]: https://opensource.org/licenses/eclipse-1.0.txt
