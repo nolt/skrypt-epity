@@ -49,14 +49,14 @@ sleep 2
 #pobieranie epity
 echo "Czy pobrać plik instalacyjny porogramu e-pity? (t/n)"
 read t
-	if [ -e ~/Pity$data/setup_e-pity2015Linux.air ] ; then
+	if [ -e ~/Pity$data/setup_e-pity2016Linux.air ] ; then
 echo "--- Nie pobieram gdyż plik jest już pobrany! ---"
 sleep 2
 		elif [ "$t" = "t" ] ; then
 echo "--- Pobieram instalator aplikacji epity! ---"
 sleep 3
-cd ~/Pity$data/ && wget http://download.e-pity.pl/down/setup_e-pity2015Linux.air
-chmod +x setup_e-pity2015Linux.air
+cd ~/Pity$data/ && wget http://download.e-pity.pl/down/setup_e-pity2016Linux.air
+chmod +x setup_e-pity2016Linux.air
 	else
 echo "--- Nie pobieram gdyż plik jest już pobrany! ---"
 	fi
@@ -111,7 +111,7 @@ sleep 2
 echo "Będę instalował pobrane aplikacje!"
 cd ~/Pity$data/
 sudo ./AdobeAIRInstaller.bin
-sudo /usr/bin/Adobe\ AIR\ Application\ Installer ~/Pity$data/setup_e-pity2015Linux.air
+sudo /usr/bin/Adobe\ AIR\ Application\ Installer ~/Pity$data/setup_e-pity2016Linux.air
 
 echo "--- Gratulacje, wszystko poszło pięknie i gładko. Folder z plikami instalacyjnymi nie jest już potrzebny, mogę go usunąć za Ciebie :) (t/n)? ---"
 read t
