@@ -5,66 +5,28 @@
 #opis		:Skrypt do instalacji programu e-pity dla systemu Linux - Ubuntu/Debian.
 #autor		:Nolt
 #data		:20150310
-#aktualizacja	:20160805
-#wersja		:0.4
+#aktualizacja	:20171220
+#wersja		:1.2
 #licencja:	:Eclipse Public License 1.0 (https://opensource.org/licenses/eclipse-1.0.txt)
 #================
 
-
-
-#tworzenie_folderu
-echo "--- Do poprawnego uruchomienia aplikacji e-pity, muszę utworzyć folder Pity$data w katalogu domowym oraz pobrać brakujące paczki dla Twojej architektury systemu. ---"
-sleep 5
-
 data=$(date +%Y)
 
+#tworzenie_folderu
+echo "--- Do poprawnego uruchomienia aplikacji e-pity, muszę utworzyć folder Pity$data w katalogu domowym oraz pobrać potrzebne pliki. ---"
+sleep 5
+
 echo "--- Tworzę wymagany folder Pity$data! ---"
-	if [ -d ~/Pity$data ] ; then
-echo "--- Folder Pity$data jest już założony ---"
-sleep 2
-	else
-echo "--- Tworzę folder Pity$data w katalogu domowym ---"
 mkdir ~/Pity$data
-	fi
-
-sleep 2
-
-#pobieranie adobeair
-echo "Czy pobrać plik instalacyjny AdobreAIR 2.6? (t/n)"
-read t
-	if [ -e ~/Pity$data/AdobeAIRInstaller.bin ] ; then
-echo "--- Nie pobieram pliku, jest już pobrany ---"
-sleep 2
-		elif [ "$t" = "t" ] ; then
-echo "--- Pobieram plik AdobreAIR 2.6! ---"
-sleep 3
-cd ~/Pity$data/ && wget http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRInstaller.bin
-chmod +x AdobeAIRInstaller.bin
-	else
-echo "--- Nie pobieram pliku, jest już pobrany ---"
-	fi
-
-sleep 2
 
 #pobieranie epity
-echo "Czy pobrać plik instalacyjny porogramu e-pity? (t/n)"
-read t
-	if [ -e ~/Pity$data/setup_e-pity2016Linux.air ] ; then
-echo "--- Nie pobieram gdyż plik jest już pobrany! ---"
-sleep 2
-		elif [ "$t" = "t" ] ; then
-echo "--- Pobieram instalator aplikacji epity! ---"
-sleep 3
-cd ~/Pity$data/ && wget http://download.e-pity.pl/down/setup_e-pity2016Linux.air
-chmod +x setup_e-pity2016Linux.air
-	else
-echo "--- Nie pobieram gdyż plik jest już pobrany! ---"
-	fi
+echo "Pobieram paczkę z programem e-pity$date."
+cd ~/Pity$data/ && wget http://www.wizzi.pl/pliki/e-pity2017.tar.xz
 
-sleep 2
+sleep 1
 
 #sprawdzanie dystrybucji i architektury
-echo "Sprawdzimy jaką dystrybucję oraz architekturę systemu Linux posiadasz(obsługiwane Debian i Ubuntu)"
+echo "Sprawdzę jaką dystrybucję oraz architekturę systemu Linux posiadasz (obsługiwane Debian i Ubuntu). Paczka .deb AdobeAIR zostanie pobrana i zainstalowana automatycznie."
 
 distro=$(lsb_release -si)
 bit=$(uname -m)
@@ -75,15 +37,17 @@ bit=$(uname -m)
 
 echo "Debian x86_64"
 
-sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install -y libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
-sudo ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0 && sudo ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+cd ~/Pity$data/
+wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_amd64.deb
+sudo dpkg -i adobeair_2.6.0.2_amd64.deb ; sudo apt-get install -f
 
 		else
 
 echo "Debian i686"
 
-sudo apt-get install -y libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
-sudo ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0 && sudo ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+cd ~/Pity$data/
+wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_i386.deb
+sudo dpkg -i adobeair_2.6.0.2_i386.deb ; sudo apt-get install -f
 
 		fi
 
@@ -93,32 +57,51 @@ sudo ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyr
 
 echo "Ubuntu x86_64"
 
-sudo apt-get install -y libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libgnome-keyring0:i386 libxaw7
-sudo ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0 && sudo ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+cd ~/Pity$data/
+wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_amd64.deb
+sudo dpkg -i adobeair_2.6.0.2_amd64.deb ; sudo apt-get install -f
 
 		else
 
 echo "Ubuntu i686"
 
-sudo apt-get install -y libgtk2.0-0 libxslt1.1 libxml2 libnss3 libxaw7 libgnome-keyring0
-sudo ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0 && sudo ln -sf /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+cd ~/Pity$data/
+wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_i386.deb
+sudo dpkg -i adobeair_2.6.0.2_i386.deb ; sudo apt-get install -f
 		fi
 	fi
 
-sleep 2
+sleep 1
 
-#instalacja
-echo "Będę instalował pobrane aplikacje!"
-cd ~/Pity$data/
-sudo ./AdobeAIRInstaller.bin
-sudo /usr/bin/Adobe\ AIR\ Application\ Installer ~/Pity$data/setup_e-pity2016Linux.air
+#instalacja epity
+echo "Będę instalował i konfigurował pobraną aplikację e-pity!"
+cd /opt/
+sudo tar xvf ~/Pity$data/e-pity2017.tar.xz
 
-echo "--- Gratulacje, wszystko poszło pięknie i gładko. Folder z plikami instalacyjnymi nie jest już potrzebny, mogę go usunąć za Ciebie :) (t/n)? ---"
-read t
-	if [ "$t" = "t" ] ; then
+#tworzenie skrótu
+echo "Tworzę skrót na pulpicie do programu e-pity"
+
+cat > ~/Pulpit/e-pity.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Terminal=false
+Icon=/opt/e-pity/share/Assets/icons/epity.ico
+Name=e-pity
+Exec=/opt/e-pity/bin/e-pity
+Categories=Utility;
+EOF
+
+user=$(id -un)
+grupa=$(id -gn)
+
+chown $user:$grupa ~/Pulpit/e-pity.desktop
+chmod +x ~/Pulpit/e-pity.desktop
+
+
+echo "--- Gratulacje, wszystko poszło pięknie i gładko. Folder z plikami instalacyjnymi nie jest już potrzebny więc go usuwam. ---"
 rm -fr ~/Pity$data
+
+sleep 1
 echo "--- Dzięki, spadam! ---"
-	else
-echo "--- Dzięki, spadam! ---"
-	fi
+
 exit
