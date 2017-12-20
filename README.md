@@ -26,6 +26,7 @@ Licencja skryptu to: [Eclipse Public License 1.0]
 Obecnie skrypt jest dostępny w dwóch kanałach
 
 master - najnowszy i aktualny; działający na więszkości systemów opartych na Debianie/Ubuntu
+
 stary - branch działający dla do wersji Ubuntu 15.10; branch jest będzie dalej wspierany i aktualizowany
 
 
