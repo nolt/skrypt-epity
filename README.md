@@ -27,7 +27,7 @@ Obecnie skrypt jest dostępny w dwóch kanałach
 
 **master** - najnowszy i aktualny; działający na więszkości systemów opartych na Debianie/Ubuntu
 
-**stary** - branch działający dla do wersji Ubuntu 15.10; branch jest będzie dalej wspierany i aktualizowany
+**stary** - branch działający do wersji Ubuntu 15.10; branch nie będzie dalej wspierany i aktualizowany
 
 
 
