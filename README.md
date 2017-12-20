@@ -21,6 +21,14 @@ następnie uruchom skrypt:
 
 Licencja skryptu to: [Eclipse Public License 1.0]
 
+## Branche
+
+Obecnie skrypt jest dostępny w dwóch kanałach
+
+**master** - najnowszy i aktualny; działający na więszkości systemów opartych na Debianie/Ubuntu
+
+**stary** - branch działający dla do wersji Ubuntu 15.10; branch jest będzie dalej wspierany i aktualizowany
+
 
 
 [www.wizzi.pl]: http://www.wizzi.pl/index.php?action=tpmod;dl=item177
