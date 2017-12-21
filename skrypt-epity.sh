@@ -5,8 +5,8 @@
 #opis		:Skrypt do instalacji programu e-pity dla systemu Linux - Ubuntu/Debian.
 #autor		:Nolt
 #data		:20150310
-#aktualizacja	:20171220
-#wersja		:1.2
+#aktualizacja	:20171221
+#wersja		:1.3
 #licencja:	:Eclipse Public License 1.0 (https://opensource.org/licenses/eclipse-1.0.txt)
 #================
 
