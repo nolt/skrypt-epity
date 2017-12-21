@@ -21,7 +21,7 @@ mkdir ~/Pity$data
 
 #pobieranie epity
 echo "Pobieram paczkę z programem e-pity$date."
-cd ~/Pity$data/ && wget http://www.wizzi.pl/pliki/e-pity2017.tar.xz
+cd ~/Pity$data/ && wget https://dl.dropboxusercontent.com/s/yzzuhuawe7fp1ev/e-pity2017.tar.xz
 
 sleep 1
 
@@ -38,7 +38,7 @@ bit=$(uname -m)
 echo "Debian x86_64"
 
 cd ~/Pity$data/
-wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_amd64.deb
+wget https://dl.dropboxusercontent.com/s/z67403tfng6s01b/adobeair_2.6.0.2_amd64.deb
 sudo dpkg -i adobeair_2.6.0.2_amd64.deb ; sudo apt-get install -f
 
 		else
@@ -46,7 +46,7 @@ sudo dpkg -i adobeair_2.6.0.2_amd64.deb ; sudo apt-get install -f
 echo "Debian i686"
 
 cd ~/Pity$data/
-wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_i386.deb
+wget https://dl.dropboxusercontent.com/s/8paimajkk4bs57p/adobeair_2.6.0.2_i386.deb
 sudo dpkg -i adobeair_2.6.0.2_i386.deb ; sudo apt-get install -f
 
 		fi
@@ -58,7 +58,7 @@ sudo dpkg -i adobeair_2.6.0.2_i386.deb ; sudo apt-get install -f
 echo "Ubuntu x86_64"
 
 cd ~/Pity$data/
-wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_amd64.deb
+wget https://dl.dropboxusercontent.com/s/z67403tfng6s01b/adobeair_2.6.0.2_amd64.deb
 sudo dpkg -i adobeair_2.6.0.2_amd64.deb ; sudo apt-get install -f
 
 		else
@@ -66,7 +66,7 @@ sudo dpkg -i adobeair_2.6.0.2_amd64.deb ; sudo apt-get install -f
 echo "Ubuntu i686"
 
 cd ~/Pity$data/
-wget http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_i386.deb
+wget https://dl.dropboxusercontent.com/s/8paimajkk4bs57p/adobeair_2.6.0.2_i386.deb
 sudo dpkg -i adobeair_2.6.0.2_i386.deb ; sudo apt-get install -f
 		fi
 	fi
