@@ -7,7 +7,7 @@
 #data		:20150310
 #aktualizacja	:20171221
 #wersja		:1.3
-#licencja:	:Eclipse Public License 1.0 (https://opensource.org/licenses/eclipse-1.0.txt)
+#licencja:	:Eclipse Public License 1.0 (https://opensource.org/licenses/EPL-1.0)
 #================
 
 data=$(date +%Y)
