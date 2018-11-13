@@ -5,8 +5,8 @@
 #opis		:Skrypt do instalacji programu e-pity dla systemu Linux - Ubuntu/Debian.
 #autor		:Nolt
 #data		:20150310
-#aktualizacja	:20171221
-#wersja		:1.3
+#aktualizacja	:20181114
+#wersja		:1.4
 #licencja:	:Eclipse Public License 1.0 (https://opensource.org/licenses/EPL-1.0)
 #================
 
@@ -21,7 +21,7 @@ mkdir ~/Pity$data
 
 #pobieranie epity
 echo "Pobieram paczkę z programem e-pity$date."
-cd ~/Pity$data/ && wget https://dl.dropboxusercontent.com/s/yzzuhuawe7fp1ev/e-pity2017.tar.xz
+cd ~/Pity$data/ && wget https://dl.dropboxusercontent.com/s/cezmdzza66ftzj6/e-pity2018.tar.xz
 
 sleep 1
 
@@ -51,7 +51,7 @@ sudo dpkg -i adobeair_2.6.0.2_i386.deb ; sudo apt-get install -f
 
 		fi
 
-	elif [ "$distro" = "Ubuntu" ] ; then 
+	elif [ "$distro" = "Ubuntu" ] ; then
 
 		if [ "$bit" = "x86_64" ] ; then
 
@@ -76,7 +76,7 @@ sleep 1
 #instalacja epity
 echo "Będę instalował i konfigurował pobraną aplikację e-pity!"
 cd /opt/
-sudo tar xvf ~/Pity$data/e-pity2017.tar.xz
+sudo tar xvf ~/Pity$data/e-pity2018.tar.xz
 
 #tworzenie skrótu
 echo "Tworzę skrót na pulpicie do programu e-pity"
