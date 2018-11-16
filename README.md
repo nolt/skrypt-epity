@@ -5,7 +5,7 @@ Skrypt do instalacji programu e-pity (http://www.e-pity.pl/pobierz_darmowy_progr
 
 ## Download
 
-Gotowy skrypt możecie pobrać ze strony [www.wizzi.pl]
+Gotowy skrypt możecie pobrać ze mojej strony [www.wizzi.pl] lub tego repozytorium.
 
 ## Uruchomienie
 
@@ -31,5 +31,5 @@ Obecnie skrypt jest dostępny w dwóch kanałach
 
 
 
-[www.wizzi.pl]: http://www.wizzi.pl/index.php?action=tpmod;dl=item177
-[Eclipse Public License 1.0]: https://opensource.org/licenses/eclipse-1.0.txt
+[www.wizzi.pl]: https://www.wizzi.pl/download/skrypt-epity/
+[Eclipse Public License 1.0]: https://opensource.org/licenses/EPL-1.0
