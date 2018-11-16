@@ -5,7 +5,7 @@ Skrypt do instalacji programu e-pity (http://www.e-pity.pl/pobierz_darmowy_progr
 
 ## Download
 
-Gotowy skrypt możecie pobrać ze mojej strony [www.wizzi.pl] lub tego repozytorium.
+Gotowy skrypt możecie pobrać z mojej strony [www.wizzi.pl] lub tego repozytorium.
 
 ## Uruchomienie
 
